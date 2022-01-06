@@ -16,7 +16,7 @@ def game_id():
     """ Trys to return the game id from environment variables
     """
 
-    if 'SteamAppId' in os.environ:
+    if 'SteamAppId' in os.environ and os.environ['SteamAppId'] != '0':
         return os.environ['SteamAppId']
     if 'SteamGameId' in os.environ:
         return os.environ['SteamGameId']
